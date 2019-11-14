@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>404 | Admissions Office OA</title>
+    <link rel="icon" type="image" href="{{ url_for('static', filename='scmc.png') }}">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='404-page/css/bootstrap.css') }}" rel="stylesheet">
+    <!-- FONT AWESOME CSS -->
+    <link href="{{ url_for('static', filename='404-page/css/font-awesome.min.css') }}" rel="stylesheet"/>
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
+    <!-- custom CSS here -->
+    <link href="{{ url_for('static', filename='404-page/css/style.css') }}" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <div class="row pad-top text-center">
+        <div class="col-md-6 col-md-offset-3 text-center">
+            <h1> What have you done? </h1>
+            <h5> 页 面 找 不 到 了 ！ </h5>
+            <span id="error-link"></span>
+            <h2>! ERROR DECETED !</h2>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-8 col-md-offset-2">
+            <h3><i class="fa fa-lightbulb-o fa-5x"></i></h3>
+            <a href="#" onclick="javascript:history.go(-1);" class="btn btn-danger">回 到 上 一 页</a>
+            <a href="{{ url_for('index') }}" class="btn btn-primary"> 回 到 主 页 </a>
+            <br/><br/>Copyright &copy; 1997-<script>document.write(new Date().getFullYear())</script>
+            <a href="http://www.scmc.edu.cn" target="_blank">SCMC</a></strong>. Admissions Office. All rights reserved.
+        </div>
+    </div>
+</div>
+<!-- /.container -->
+<!--Core JavaScript file  -->
+<script src="{{ url_for('static', filename='404-page/js/jquery-1.10.2.js') }}"></script>
+<!--bootstrap JavaScript file  -->
+<script src="{{ url_for('static', filename='404-page/js/bootstrap.js') }}"></script>
+<!--Count Number JavaScript file  -->
+<script src="{{ url_for('static', filename='404-page/js/countUp.js') }}"></script>
+<!--Custom JavaScript file  -->
+<script src="{{ url_for('static', filename='404-page/js/custom.js') }}"></script>
+</body>
+</html>
