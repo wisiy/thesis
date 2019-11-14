@@ -1,2 +1,2 @@
 # thesis
-This is my
+This is my thesis
