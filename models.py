@@ -92,6 +92,18 @@ class Major(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     code_major = db.Column(db.String(20))  # 专业代码
     name_major = db.Column(db.String(100))  # 专业名称
+    major_direction = db.relationship("MajorDirection", backref='major')  # 外键关系关联
 
     def __repr__(self):
         return "<Major %r>" % self.name_major
+
+
+class MajorDirection(db.Model):
+    __tablename__ = 'majordirection'
+    __table_args__ = {"useexisting": True}
+    id = db.Column(db.Integer, primary_key=True)
+    name_direction = db.Column(db.String(100))  # 专业名称
+    major_id = db.Column(db.Integer, db.ForeignKey('major.id'))  # 所属大分类
+
+    def __repr__(self):
+        return "<MajorDirection %r>" % self.name_direction
